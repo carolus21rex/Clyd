@@ -136,8 +136,8 @@ class Intelligence:
             error *= -1
         if abs(error) > 10:
             error = 0
-        if ran() < 0.0003:
-            print(f"target: {target}, error: {error}, prediction: {output}")
+        # if ran() < 0.0003:
+            # print(f"target: {target}, error: {error}, prediction: {output}")
         self.input_layer.train(error, self.learning_rate)
         for layer in self.hidden_layers:
             layer.train(error, self.learning_rate)
