@@ -8,7 +8,7 @@ def doMultithread():
     learn_rate = 0.0001
     model_num = 0
     in_l, hid_ls, out_l = 6 * stream_length, [5, 5, 5], 1
-    # learn(in_l, hid_ls, out_l, stream_length, 0.001, 0)
+    # learn(in_l, hid_ls, out_l, stream_length, learn_rate, model_num)
 
     threads = []
     for _ in range(20):
