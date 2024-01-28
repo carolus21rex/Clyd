@@ -52,10 +52,5 @@ def learn(in_l, hid_ls, out_l, stream_length, learn_rate, model_num):
                         success += 1
 
         file_index += 1
-        # print(f"progress: {file_index} out of: {file_cnt}. {100.0*file_index/file_cnt}% complete")
+        print(f"model: {model_num} progress: {file_index} out of: {file_cnt}. {100.0*file_index/file_cnt}% complete")
     intLib.export_intelligence(intel, f"model_{str(model_num).zfill(5)}_{format(success/cnt, '.5f').replace('.', '')}.csv")
-
-
-if __name__ == "__main__":
-
-
