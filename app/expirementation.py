@@ -12,8 +12,8 @@ def doMultithread(process_id):
     # learn(in_l, hid_ls, out_l, stream_length, learn_rate, model_num)
 
     # Use partial to create a new function with fixed parameters
-    partial_learn = functools.partial(learn.learn, param1=in_l, param2=hid_ls, param3=out_l,
-                                      param4=stream_length, param5=learn_rate, param6=model_num)
+    partial_learn = functools.partial(learn.learn, in_l=in_l, hid_ls=hid_ls, out_l=out_l,
+                                      stream_length=stream_length, learn_rate=learn_rate, model_num=model_num)
 
     # Call the partial_learn function
     partial_learn()

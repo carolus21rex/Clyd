@@ -14,7 +14,7 @@ def init(in_l, hid_ls, out_l, learn_rate):
 def learn(in_l, hid_ls, out_l, stream_length, learn_rate, model_num):
     intel = init(in_l, hid_ls, out_l, learn_rate)
 
-    file_index = 0
+    file_index = 5800
 
     file_cnt = dp.getCsvFiles(file_path)
 

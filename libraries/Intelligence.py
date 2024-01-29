@@ -159,6 +159,7 @@ class Intelligence:
 
 
 def export_intelligence(intelligence, output_file):
+    print(output_file)
     with open(output_file, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
 
