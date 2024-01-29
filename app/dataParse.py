@@ -18,7 +18,7 @@ def load(file_path, file_index):
     csv_files.sort()
 
     if file_index < 0 or file_index >= len(csv_files):
-        raise IndexError("File index out of range")
+        return None
 
     selected_file = csv_files[file_index]
 

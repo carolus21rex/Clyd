@@ -14,7 +14,7 @@ def init(in_l, hid_ls, out_l, learn_rate):
 def learn(in_l, hid_ls, out_l, stream_length, learn_rate, model_num):
     intel = init(in_l, hid_ls, out_l, learn_rate)
 
-    file_index = 5800
+    file_index = 5865
 
     file_cnt = dp.getCsvFiles(file_path)
 
@@ -30,7 +30,7 @@ def learn(in_l, hid_ls, out_l, stream_length, learn_rate, model_num):
                 if abs(target) < 5:
                     intel.train(data, target)
         file_index += 1
-        # print(f"progress: {file_index} out of: {file_cnt}. {100.0*file_index/file_cnt}% complete")
+        print(f"model: {model_num} progress: {file_index} out of: {file_cnt}. {100.0*file_index/file_cnt}% complete")
         if file_index > 0.8 * file_cnt:
             break
 
@@ -53,4 +53,5 @@ def learn(in_l, hid_ls, out_l, stream_length, learn_rate, model_num):
 
         file_index += 1
         print(f"model: {model_num} progress: {file_index} out of: {file_cnt}. {100.0*file_index/file_cnt}% complete")
+
     intLib.export_intelligence(intel, f"model_{str(model_num).zfill(5)}_{format(success/cnt, '.5f').replace('.', '')}.csv")
